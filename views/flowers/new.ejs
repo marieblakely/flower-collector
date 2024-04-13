@@ -8,7 +8,13 @@
 <body>
   <h1>New Flower</h1>
   <form action="/flowers" method="POST" autocomplete="off">
-    <input type="text" name="text">
+    <input type="text" name="name" placeholder="Flower Name">
+    <label for="type">Type:
+      <select name="type" id="type">
+        <option value="Perennial">Perennial</option>
+        <option value="Non-Perennial">Non-Perennial</option>
+      </select>
+    </label>
     <button type="submit">Add Flower</button>
   </form>
 </body>

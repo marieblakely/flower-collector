@@ -6,7 +6,6 @@ const flowerSchema = new Schema({
   name: String,
   type: {type: String, enum: ['Perennial', 'Non-Perennial']},
   planted: Boolean,
-  photo: String
 }, {
   timestamps: true
 })
