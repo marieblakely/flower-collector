@@ -15,10 +15,10 @@
           method="POST"
           class="delete-form"
         >
-          <button class="delete-button" type="submit">X</button>
+          <button class="delete-button" type="submit">Remove</button>
         </form>
-        <a href="/flowers/<%= flower._id %>/edit"><button class="edit-button">✏️</button></a>
-				<a href="/flowers/<%= flower._id %>"><%= flower.text %></a> 
+        <a href="/flowers/<%= flower._id %>/edit"><button class="edit-button">Edit</button></a>
+				<a href="/flowers/<%= flower._id %>"><%= flower.name %></a> 
 				- 
 				<%= flower.planted ? 'yes' : 'no' %>
 			</li>
