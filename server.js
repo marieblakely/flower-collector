@@ -1,13 +1,16 @@
 // import npm packages
+import 'dotenv/config.js'
 import express from 'express'
+import { flowerCollector} from './data/flower-data.js'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import createError from 'http-errors'
 import logger from 'morgan'
+import './config/database.js'
 
 // import routers
 import { router as indexRouter } from './routes/index.js'
-import { router as usersRouter } from './routes/users.js'
+import { router as flowersRouter } from './routes/flowers.js'
 
 // create the express app
 const app = express()
@@ -27,7 +30,7 @@ app.use(
 
 // mount imported routes
 app.use('/', indexRouter)
-app.use('/users', usersRouter)
+app.use('/flowers', flowersRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

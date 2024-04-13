@@ -5,3 +5,7 @@ const flowerCollector = [
   {type: 'Gardenia', perennial: true, planted: false},
   {type: 'Hydrangea', perennial: true, planted: true},
 ]
+
+export {
+  flowerCollector
+}
