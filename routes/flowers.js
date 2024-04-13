@@ -10,5 +10,7 @@ router.get('/new', flowersCtrl.new)
 // POST localhost:3000/todos
 router.post('/', flowersCtrl.create)
 
+// GET localhost:3000/todos/:todoId/edit
+router.get('/:flowerId/edit', flowersCtrl.edit)
 
 export { router }

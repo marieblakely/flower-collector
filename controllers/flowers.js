@@ -31,10 +31,23 @@ function create(req, res) {
   })
 }
 
+function edit(req, res) {
+  Flower.findById(req.params.flowerId)
+  .then(flower => {
+    res.render('flowers/edit', {
+      flower: flower
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/flowers')
+  })
+}
 
 
 export {
   index,
   newFlower as new,
   create,
+  edit,
 }
