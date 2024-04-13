@@ -6,6 +6,26 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <h1>Flowers</h1>
+  <ul>
+    <% flowers.forEach(flower => { %>
+      <li>
+        <form 
+          action="/flowers/<%= flower._id %>?_method=DELETE"
+          method="POST"
+          class="delete-form"
+        >
+          <button class="delete-button" type="submit">X</button>
+        </form>
+        <a href="/flowers/<%= flower._id %>/edit"><button class="edit-button">✏️</button></a>
+				<a href="/flowers/<%= flower._id %>"><%= flower.text %></a> 
+				- 
+				<%= flower.planted ? 'yes' : 'no' %>
+			</li>
+    <% }) %>
+  </ul>
+  <a href="/flowers/new">Add Flower</a><br>
+  <a href="/">Back</a>
+  </ul>
 </body>
 </html>
