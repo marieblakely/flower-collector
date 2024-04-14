@@ -15,7 +15,7 @@ router.post('/', flowersCtrl.create)
 
 router.delete('/:flowerId', flowersCtrl.delete)
 
-router.get('/:flowerId', flowersCtrl.update)
+router.put('/:flowerId', flowersCtrl.update)
 
 
 

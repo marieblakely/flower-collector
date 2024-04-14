@@ -72,7 +72,7 @@ function update(req, res) {
   req.body.planted =!!req.body.planted
   Flower.findByIdAndUpdate(req.params.flowerId, req.body, {new: true})
   .then(flower => {
-    res.redirect(`flowers/${req.params.flowerId}`)
+    res.redirect(`/flowers/${req.params.flowerId}`)
   })
   .catch(error => {
     console.log(error)
