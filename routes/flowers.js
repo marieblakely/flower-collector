@@ -2,15 +2,23 @@ import { Router } from 'express'
 import * as flowersCtrl from '../controllers/flowers.js'
 const router = Router()
 
-// GET localhost:3000/flowers
+
 router.get('/', flowersCtrl.index)
 
-// GET localhost:3000/todos/new
 router.get('/new', flowersCtrl.new) 
-// POST localhost:3000/todos
+
+router.get('/:flowerId', flowersCtrl.show)
+
+router.get('/:flowerId/edit', flowersCtrl.edit)
+
 router.post('/', flowersCtrl.create)
 
-// GET localhost:3000/todos/:todoId/edit
-router.get('/:flowerId/edit', flowersCtrl.edit)
+router.delete('/:flowerId', flowersCtrl.delete)
+
+router.get('/:flowerId', flowersCtrl.update)
+
+
+
+
 
 export { router }
