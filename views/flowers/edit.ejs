@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Edit Flower</h1>
+  <form action="/flowers/<%= flower._id %>?_method=PUT" method="POST" autocomplete="off">
+    <input type="text" name="name" value="<%= flower.name %>">
+    <input type="checkbox" name="planted" <%= flower.planted ? 'checked' : '' %>>
+    <button type="submit">Save</button>
+  </form>
+</body>
+</html>
